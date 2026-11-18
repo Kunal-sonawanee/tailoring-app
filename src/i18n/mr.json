@@ -1,0 +1,17 @@
+{
+  "app.name": "टेलरिंग ॲप",
+  "phase0.note": "ॲपची पायाभरणी झाली आहे. पुढच्या टप्प्यात लॉगिन आणि दुकान सेटअप येईल.",
+  "status.title": "सेटअप तपासणी",
+  "status.app": "ॲप",
+  "status.database": "डेटाबेस",
+  "status.files": "फोटो साठवण",
+  "status.checking": "तपासत आहे…",
+  "status.ok": "चालू आहे",
+  "status.fail": "अडचण आहे",
+  "status.retry": "पुन्हा तपासा",
+  "today.label": "आजची तारीख",
+  "language.title": "भाषा",
+  "language.mr": "मराठी",
+  "language.hi": "हिंदी",
+  "language.en": "English"
+}

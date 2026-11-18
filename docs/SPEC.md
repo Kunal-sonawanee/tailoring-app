@@ -214,7 +214,7 @@ Applies to orders with status `pipeline` or `in_process`. "Today" = current date
 ## 12. Build phases & checklist
 Deploy after every phase and test on an Android phone in Chrome.
 
-- [ ] **Phase 0 — Setup:** scaffold Vite+React+TS+Tailwind, Hono Worker with static assets, create D1 `tailoring-db` and R2 `tailoring-files`, `wrangler.toml` bindings, i18n skeleton (mr/hi/en), PWA manifest + icons, first deploy.
+- [ ] **Phase 0 — Setup:** scaffold Vite+React+TS+Tailwind, Hono Worker with static assets, create D1 `tailoring-db` and R2 `tailoring-files`, `wrangler.toml` bindings, i18n skeleton (mr/hi/en), PWA manifest + icons, first deploy. _(Done 18 Nov except first deploy: waiting for `CLOUDFLARE_API_TOKEN` GitHub secret + merge to `main`.)_
 - [ ] **Phase 1 — Auth & setup:** migrations for all tables, PIN login (PBKDF2 via WebCrypto, 100k iterations), sessions, shop setup wizard, seed garments (§6), employees CRUD.
 - [ ] **Phase 2 — Customers:** add/edit/search, serial numbers, measurements per garment, note.
 - [ ] **Phase 3 — Orders & alerts:** new order form, items, employee assignment, statuses, dates, Home alerts (§9), orders list with filters.

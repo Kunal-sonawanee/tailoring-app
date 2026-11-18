@@ -1,0 +1,17 @@
+{
+  "app.name": "टेलरिंग ऐप",
+  "phase0.note": "ऐप की नींव तैयार है। अगले चरण में लॉगिन और दुकान सेटअप आएगा।",
+  "status.title": "सेटअप जाँच",
+  "status.app": "ऐप",
+  "status.database": "डेटाबेस",
+  "status.files": "फोटो स्टोरेज",
+  "status.checking": "जाँच रहे हैं…",
+  "status.ok": "चालू है",
+  "status.fail": "समस्या है",
+  "status.retry": "फिर से जाँचें",
+  "today.label": "आज की तारीख",
+  "language.title": "भाषा",
+  "language.mr": "मराठी",
+  "language.hi": "हिंदी",
+  "language.en": "English"
+}

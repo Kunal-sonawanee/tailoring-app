@@ -1,0 +1,17 @@
+{
+  "app.name": "Tailoring App",
+  "phase0.note": "The app's foundation is ready. Login and shop setup come in the next phase.",
+  "status.title": "Setup check",
+  "status.app": "App",
+  "status.database": "Database",
+  "status.files": "Photo storage",
+  "status.checking": "Checking…",
+  "status.ok": "Working",
+  "status.fail": "Problem",
+  "status.retry": "Check again",
+  "today.label": "Today's date",
+  "language.title": "Language",
+  "language.mr": "मराठी",
+  "language.hi": "हिंदी",
+  "language.en": "English"
+}
