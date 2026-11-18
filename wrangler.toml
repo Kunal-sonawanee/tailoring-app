@@ -1,0 +1,24 @@
+# Cloudflare Worker: serves the React build (static assets) + /api/* (Hono).
+name = "tailoring-app"
+main = "worker/index.ts"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+# React app is a single-page app: unknown paths serve index.html.
+not_found_handling = "single-page-application"
+# Only /api/* runs the Worker; everything else is served straight from static assets (free, fast).
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tailoring-db"
+database_id = "14e4c9b1-447b-4557-91f9-d029eb91291e"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "tailoring-files"
+
+[observability]
+enabled = true
