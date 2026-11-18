@@ -1,6 +1,7 @@
 # Cloudflare Worker: serves the React build (static assets) + /api/* (Hono).
 name = "tailoring-app"
 main = "worker/index.ts"
+account_id = "0f70b8dec59db31123e270a54cc9ea86"
 compatibility_date = "2026-10-01"
 compatibility_flags = ["nodejs_compat"]
 

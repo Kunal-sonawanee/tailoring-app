@@ -35,8 +35,17 @@ A mobile-first web app (PWA) that replaces the paper registers of a small ladies
 - At the end of each phase: tick the checklist in SPEC §12 and add a 2–3 line note to `docs/CHANGELOG.md`.
 - Items marked **[CONFIRM]** in SPEC are assumptions waiting for the shop's register photos. Build them as config/seed data so they're easy to change.
 
-## Commands (fill in once scaffolded)
-- `npm run dev` — local dev (Vite + `wrangler dev`)
-- `npm run build` — build frontend
-- `npx wrangler d1 migrations apply tailoring-db --local|--remote`
-- `npx wrangler deploy`
+## Commands
+- `npm run dev` — local dev: Vite + the Worker (via `@cloudflare/vite-plugin`) with local D1/R2 on one port
+- `npm run build` — i18n key check → typecheck → build frontend + Worker into `dist/`
+- `npm run preview` — build, then serve the production build locally
+- `npm run i18n:check` — check mr/hi/en have the same keys
+- `npm run cf-typegen` — regenerate `worker/worker-configuration.d.ts` after changing `wrangler.toml`
+- `npm run db:migrate:local` / `npm run db:migrate:remote`
+- **Deploy:** push to `main` → `.github/workflows/deploy.yml` applies D1 migrations and runs `wrangler deploy` (repo secret `CLOUDFLARE_API_TOKEN`). Manual: `npm run deploy` from a machine with a Cloudflare login. Deploying from a Claude cloud session fails: the proxy replaces the asset-upload key.
+
+## Layout
+- `src/` React app · `src/i18n/` strings + `useI18n()` · `src/lib/dates.ts` IST/date helpers
+- `worker/index.ts` Hono API (`/api/*` only; all other paths are static assets)
+- `migrations/` D1 SQL · `public/icons/` PWA icons (`icon.svg` is the source)
+- Cloudflare: D1 `tailoring-db` (id in `wrangler.toml`, APAC), R2 `tailoring-files` (binding `FILES`)
